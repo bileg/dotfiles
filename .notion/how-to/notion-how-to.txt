@@ -1,0 +1,56 @@
+
+
+git clone git://notion.git.sourceforge.net/gitroot/notion/notion
+
+sudo apt-get install libxinerama-dev libxrandr-dev
+
+sudo chown -R username /usr/local/etc/notion
+sudo chmod o+r /usr/local/etc/notion
+
+cd notion/etc && make && sudo make install
+cd notion/ioncore && make && sudo make install    # /usr/local/lib/notion/lc/ioncore_ext.lc
+sudo chown -R username /usr/local/lib/notion
+sudo chmod o+r /usr/local/lib/notion
+
+=============================================================
+
+From someone's blog:
+
+Compilation and Installation
+First you’ll want to checkout the project from git. Create a nice working directory, then execute a
+
+git clone git://notion.git.sourceforge.net/gitroot/notion/notion 
+
+in said directory. This will check out the Notion source code. This comes with a nice writeup on how to install. For other Ubuntu/Debian users, it basically boils down to a quick 4-step install.
+
+Compile and install Notion with make && sudo make install
+
+Adding An Entry to GDM
+For those of you coming from Ubuntu/Debian and are using a GDM type login manager, you’ll want a selectable entry when you login. Edit a file named /usr/share/xsessions/notion.desktop, and paste the following text within.
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=Notion
+Comment=This session logs you into Notion
+Exec=notion
+Icon=
+Type=Application
+
+Day to Day Usage
+There are a few things that a typical Gnome desktop user may find confusing or irritating when they first startup Notion. First, if you’re not attached to NetworkManager, I recommend installing WICD. It’s a terrific network manager and runs without the need for a taskbar.
+For those needing to start quickly, remember the F2, F9, and F12 keys. F2 opens a terminal into a current frame, and F12 opens the main menu at the bottom of the screen (much like vim or emacs). Frames are set locations which programs open into, in a tabbed fashion (like Chromium or Firefox). You can resize these frames with alt+right-click, though once you have a nice desktop full of frame positions this shouldn’t be a common operation. Multiple pressings of F12 will cycle through the standard menu options, and the F12 run… menu allows for automatic terminal completion of actual commands. Configuration and menu entries are controlled via text files ala Fluxbox. Workspaces as a concept still remain, though they are created on the fly. Create a new workspace with F9, which you can use to tab through all available workspaces. You can also directly switch between workspaces with alt->#, where # is the workspace number. Finally, if you’re constantly switching between terminals and leaving some open in screen windows etc, it’d be handy if your bash history was constantly updating. Just edit your .bashrc and append PROMPT_COMMAND="history -a; history -n" This has the added effect of enabling you to keep a window with a running log of all your shell activity for each window using tail -f ~/.bash_history
+
+For those following the previous article, you can setup the same programmer’s background near instantly as follows.
+
+    Split the Left Frame Vertically. I like to use alt + right-click to resize the windows to about the 75% mark
+    Split the Right Frame Vertically
+    Split the Top Right Frame Horizontally
+    Attach Terminal (F2) to the Top Left Frame
+    Attach Terminal (F2) to the Bottom Left Frame
+    Attach Terminal (F2) to the Bottom Right Frame
+    Attach gedit (F12->run…->gedit) to the Center Right Frame
+    Attach conky (F12->run…->conky) to the Right Right Frame
+
+And that’s it! Ideally, you should never really need to use the mouse for window manager operations, though typical browser and gedit copy/pasting causes me to relapse often. Now get coding!
+
+

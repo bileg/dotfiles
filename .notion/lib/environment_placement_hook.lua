@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/scripts/legacy/environment_placement_hook.lua

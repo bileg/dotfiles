@@ -1,0 +1,16 @@
+
+
+Your login script, .xinitrc, works with startx, but graphical login managers like GDM do not look for .xinitrc. Instead, they look for a file named .xsession in your home directory. To make GDM run your .xinitrc script, you have to link it to .xsession with the following command: 
+
+ln -s ~/.xinitrc ~/.xsession
+
+
+LightDM configuration: Ubuntu 12.04 uses LightDM by default.
+Create a new file /usr/share/xsessions/custom.desktop with:
+
+[Desktop Entry]
+Name=Xsession
+Exec=/etc/X11/Xsession
+
+You should now have a new session option during login, Xsession will load the user's ~/.xsession file 
+

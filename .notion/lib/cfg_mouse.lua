@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/keybindings/cfg_mouse.lua

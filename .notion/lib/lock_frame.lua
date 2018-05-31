@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/scripts/lock_frame.lua

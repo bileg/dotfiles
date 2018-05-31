@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/scripts/switch_bindings.lua

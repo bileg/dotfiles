@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/scripts/min_tabs.lua

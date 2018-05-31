@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/scripts/query_url.lua

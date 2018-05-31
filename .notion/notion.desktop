@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Notion
+Comment=Notion window manager
+Comment[cs]=Správce oken Notion
+Exec=/etc/X11/Xsession
+Type=Application

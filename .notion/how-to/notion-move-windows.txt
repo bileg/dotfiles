@@ -1,0 +1,136 @@
+
+
+
+
+Once you start using more than one workspace, it will only be a matter of time before you decide that you should move a window between them. That's easy -- just tag the window by typing Mod1-t when it's the active window; then, move to the workspace you want to move it to, and type Mod1-k A.
+
+
+
+
+
+
+
+http://archive09.linux.com/feature/55164?theme=print
+
+Linux.com
+
+Everything Linux and Open Source
+
+Ion, the efficient window manager
+
+June 27, 2006 (8:00:00 AM)	  -  6 years, 4 months ago
+By: Michael Stutz
+
+"So-called 'modern desktop environments' are totally unusable, and present-day mainstream graphical user interfaces in general are far less usable than they are praised to be." So begins the declaration of intent behind Ion, a tiny window manager with no icons, backgrounds, or themes. It does have tabs -- its author, Tuomo Valkonen, invented the concept -- and once you spend time with it you're struck by the efficiency of its design.
+The philosophy behind Ion is that window managers aren't meant to be seen, but to manage windows; anything more is dross. A few window managers out there share this aesthetic, such as Ratpoison, but they're rare in today's world of photogenic desktop environments, which seem to always be looking for an opportunity to add more decoration and ornament.
+
+In contrast, there isn't much to look at in your average Ion screenshot because there isn't much (visually) to the program itself. You generally view X clients in full-screen windows, switching between them with quick simple keystrokes. Ion does support the mouse, but it's built for speed -- which means the keyboard. If you're quick on the keys you'll adore it, because with Ion you can easily use the keyboard for everything.
+
+Admittedly, this approach isn't for everyone. If you can't live without the idea of desktop decor, you probably won't care for it. And the documentation warns that those applications that don't comply with the Inter-Client Communication Conventions Manual (ICCCM) won't behave well with it. Also, those applications that use multiple windows and frequent pop-ups don't always work smoothly with it, either -- although, as shown in this screenshot of the GIMP, you can usually get it to work.
+
+So what do you see when you start X with Ion as your window manager? Not much.
+
+Ion keeps all client windows in frames. When you start, a default empty frame will appear. You'll see a small bar at the top of the screen above the empty window. Picture it as a horizontal line that can expand and contract to hold neatly connected windows. Only one window will be visible at any one time, since each takes up the entire screen. When new windows are created, their names will be written on that bar. Those are Ion's tabs; clicking on one brings its corresponding window in focus. When Ion needs to query you (such as when confirming exit or restart), it's written in a dialog bar that will appear on the bottom of the screen.
+
+Ion command quick reference
+Window navigation
+
+Mod1-k num switches to window num in current frame
+
+Mod1-k n switches to next window in current frame
+
+Mod1-k p switches to previous window in current frame
+
+Mod1-C closes the current window
+
+Frame navigation
+
+Mod1-s splits the current frame horizontally
+
+Mod1-k s splits the current frame vertically
+
+mod1-n moves vertically to the next frame
+
+mod1-p moves vertically to the previous frame
+
+Mod1-tab moves horizontally to the next frame
+
+Mod1-k tab moves horizontally to the previous frame
+
+Mod1-k x kills the current frame
+
+Mod1-R resizes the current frame
+
+Workspace navigation
+
+Mod1-num switches to workspace num
+
+Mod1-leftarrow moves to the previous workspace
+
+Mod1-rightarrow moves to the next workspace
+
+Mod1-t tags the current window
+
+mod1-k a attaches tagged window to the current workspace
+
+Mod1-a attaches named window to the current workspace
+
+Functions
+
+F1 displays specified man page
+
+F2 opens an xterm
+
+F3 runs specified command
+
+F4 starts an ssh session
+
+F5 edits specified file
+
+F6 views specified file
+
+F9 switches to specified workspace
+
+F12 opens Ion menu (has exit option)
+
+Windows, frames and workspaces
+Ion comes pre-configured with a number of useful functions that you run by typing the function keys -- F2, for example, starts an xterm, and F3 queries (with tab completion) for the name of a program to run.
+
+Ion's movement commands begin with the "Mod1" prefix, which is usually set to the Alt key. But like all of Ion's key bindings, you can configure it to whatever you like -- if you have applications that need Alt and take precedence, just bind it to something like the left Ctrl key.
+
+When you start a new X client, it opens in a new window and the focus changes to that window. To move back to the last window, type Mod1-k k. When you exit a program, its window closes; to close any window immediately, type Mod1-k c.
+
+You can switch to a particular window in the current frame by typing its number after Mod1-k, and you can cycle through all of the windows in the frame with the Mod1-k n and Mod1-k p commands, which move to the next and previous window respectively.
+
+All of the movement commands have wraparound -- if you're at the last window in the frame and you run Mod1-k n, you'll wrap back to the first.
+
+You're not limited to one main frame; you can have many of them, each in its own workspace. By default, you're in workspace number 1; to switch to a workspace, give its number with Mod1. For example, to move to workspace 3, type Mod1-3. The Mod1-leftarrow and Mod1-rightarrow commands loop through all the workspaces.
+
+Once you start using more than one workspace, it will only be a matter of time before you decide that you should move a window between them. That's easy -- just tag the window by typing Mod1-t when it's the active window; then, move to the workspace you want to move it to, and type Mod1-k A.
+
+You can also move windows by name: type Mod1-a when you're in the target workspace, then type the name of the window in the Ion dialog box, and window will be moved to that workspace.
+
+Splitting the view
+
+Just as the Vim and Emacs text editors let you split their windows to view multiple files at once, you can split Ion's frames, thus putting multiple clients on the screen at once. This comes in handy when you're working with applications that have multiple windows, such as the GIMP.
+
+There are two ways to split: horizontally with Mod1-s and vertically with Mod1-k s. The Mod1-n and Mod1-p commands correspond to the motion commands for moving between windows in a frame -- they move vertically to the next and previous frames inside the current frame. To move horizontally between frames, use Mod1-tab and Mod1-k tab.
+
+You're not limited to a single split frame -- you can split frames within frames both horizontally and vertically. To kill the current frame (provided that it's empty), type Mod1-k x. The other frames will become larger to fill the space.
+
+Right-clicking on any border line and dragging will resize the frame (except when it's full screen), but you can do it with the keyboard, too: type Mod1-R to resize the current frame, use the arrow keys to grow the outline to the new size (use Shift with the arrow keys to shrink it), and then press Enter.
+
+Customization
+
+If you want certain programs to run whenever you start an X session, just put them in your .xsession file, just as you would with any other window manager.
+
+There's a lot more you can do with Ion. Beginning with its 2.0 release a few years back, Ion has used the object-oriented Lua language for scripting. You can use Lua to change the keybindings and write modules to extend Ion's functionality.
+
+Look in /usr/local/etc/ion/ for the main configuration files; you can keep your own copies in ~/ion2/, which will override any of the main settings. The ion.lua file is the main configuration file, while ion-bindings.lua holds the key bindings. One user filled his numeric keypad with single-key commands. The file draw.lua contains definitions for the properties of the very minimal lines and text that Ion draws.
+
+The future: Ion 3
+
+The next major revision, Ion 3, has been in the works for some time. There are some new features -- there's a floating "scratchpad," for example -- but it basically sticks to the same winning formula it had before. While the configuration files and scripting has changed a bit with Ion 3, Valkonen told me that once it's finally stable and finished, he plans on taking a break from further Ion development.
+
+Read in the original layout at: http://archive09.linux.com/feature/55164
+

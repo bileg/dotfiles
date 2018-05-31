@@ -1,0 +1,14 @@
+
+firefox -new-tab -url https://accounts.google.com/logout
+chromium-browser https://accounts.google.com/logout
+
+#sleep 2
+#
+#killall firefox
+#killall chromium-browser
+#
+#for prog in firefox chromium; do
+#    pgrep ${prog} | xargs kill
+#done
+
+xautolock -locknow

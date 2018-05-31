@@ -1,0 +1,3 @@
+ls -l /tmp/ssh-KqOuwIWZPmyb
+export SSH_AUTH_SOCK=/tmp/ssh-KqOuwIWZPmyb/agent.32390 
+ssh-add -l

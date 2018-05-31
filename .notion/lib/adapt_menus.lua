@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/scripts/legacy/adapt_menus.lua

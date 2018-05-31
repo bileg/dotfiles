@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/styles/look_cleansteel_trans.lua

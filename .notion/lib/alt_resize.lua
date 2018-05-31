@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/scripts/legacy/alt_resize.lua

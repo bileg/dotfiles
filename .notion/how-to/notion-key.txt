@@ -1,0 +1,102 @@
+
+
+xmodmap
+
+
+
+
+Ion command quick reference
+
+Window navigation
+
+Mod1-k num switches to window num in current frame
+
+Mod1-k n switches to next window in current frame
+
+Mod1-k p switches to previous window in current frame
+
+Mod1-C closes the current window
+
+Frame navigation
+
+Mod1-s splits the current frame horizontally
+
+Mod1-k s splits the current frame vertically
+
+mod1-n moves vertically to the next frame
+
+mod1-p moves vertically to the previous frame
+
+Mod1-tab moves horizontally to the next frame
+
+Mod1-k tab moves horizontally to the previous frame
+
+Mod1-k x kills the current frame
+
+Mod1-R resizes the current frame
+
+Workspace navigation
+
+Mod1-num switches to workspace num
+
+Mod1-leftarrow moves to the previous workspace
+
+Mod1-rightarrow moves to the next workspace
+
+Mod1-t tags the current window
+
+mod1-k a attaches tagged window to the current workspace
+
+Mod1-a attaches named window to the current workspace
+
+Functions
+
+F1 displays specified man page
+
+F2 opens an xterm
+
+F3 runs specified command
+
+F4 starts an ssh session
+
+F5 edits specified file
+
+F6 views specified file
+
+F9 switches to specified workspace
+
+F12 opens Ion menu (has exit option)
+
+
+
+
+
+Starting Applications in Frames
+
+To open an application in the frame, press F3 and type in the command to start it (such as “firefox”). If you want to open up a terminal, you can press just F2 instead and F1 for man page. There are even short cuts to use SSH (F4), edit files (F5) and view text files (F6).
+
+If you have tried starting multiple applications, you’ll notice that they will all open up to the frame that is in focus. Moving applications to the other frame can be done using the keyboard. For a number of the keyboard shortcuts, Ion uses the mod key. By default, the mod key is set to the alt key. If you do not like this, you can configure Ion to use a different key.
+Moving Between Windows
+
+Switching between the windows in the same frame is done by pressing mod + k  n (That is, press mod and k keys simultaneously. Let go of the k key, but keep holding the mod key. Then press n while still holding the mod key).
+Moving Windows to Other Frames
+
+Using a single frame is not a good utilisation of the available screen space. In Ion, moving an application to another frame requires you to “tag” it first. To tag an application, bring the application to focus and pressing mod + t. A mark is placed at the top corner of the title bar to show that it has been tagged.
+A tagged title bar.
+
+A title bar with a "tagged" mark in the top right corner.
+
+Pressing mod + t again will remove the tagging. It is possible to have multiple windows tagged simultaneously. This is particularly helpful when you want to move multiple windows
+Attaching Windows
+
+Once the window the window is tagged, move horizontally to the adjacent frame with mod + tab. To move vertically, use mod + n or mod + p. Pressing mod + a will prompt you for the name of the window to attach to the frame. If you want to place all of the tagged windows to the frame, you can simply use mod + k a (like before, press mod + k then mod + a, without letting go with the mod key).
+Reorganising Your Frames
+
+Ion allows you to reorganise your frames, however you want. First, to resize a frame, press mod + r and then use arrow keys to make the frame grow. Windows can be maximised horizontally (mod + k h) and vertically (mod + k v). To further split the current frame, use mod + k s for horizontal splits. To delete the current frame, use mod + k x.
+Workspaces
+
+Finally, Ion support for multiple workspaces (similar to having multiple desktops). Workspaces are created using the F9 key. Before one is created, it will prompt you for a name for the workspace. If you enter the name of an existing workspace, it will go to that one instead. You can also switch between workspaces by holding the mod key and pressing a numeric key.
+
+
+
+

@@ -1,0 +1,42 @@
+background no
+out_to_console yes
+out_to_x no
+update_interval 5.0
+total_run_times 0
+double_buffer yes
+use_spacer none
+
+TEXT
+
+#${battery BAT1}, ${battery_time BAT1} | CPU: ${cpu}% | Mem: ${memperc}% | /root: ${fs_free_perc /}% | Vol: ${exec ~/.notion/amixer.sh 'Master' 'Mono'} | ${time %I:%M:%S %p | %B %e, %Y}
+
+#Physical => Package
+CPU | Load: ${cpu}% | Temp: ${exec sensors | grep Package | sed 's/+//g' | awk '{print $4}'} | RAM: ${memperc}% | ${execi 60 nvidia-smi --query-gpu=name --format=csv,noheader | head -1} | ${exec nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader | head -1} | Temp: ${exec nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits | head -1}°C | Memory: ${exec nvidia-smi --query-gpu=memory.used --format=csv,noheader | head -1} | Free space /: ${fs_free_perc /}% /home: ${fs_free_perc /home}% | Net: ${exec ~/.notion/bin/network_status.sh} | Vol: ${exec ~/.notion/amixer.sh 'Master' 'Mono'} | Upd: ${exec ~/.notion/bin/check_updates}${exec ~/.notion/bin/reboot_required} | ${time %I:%M:%S %p | %B %e, %Y}
+
+
+# cpu freq: ${freq_g (1)} GHz
+# gpu total mem: ${exec nvidia-smi --query-gpu=memory.total --format=csv,noheader | head -1}
+# gpu temp: ${execi 60 nvidia-settings -query [gpu:0]/GPUCoreTemp -t 2>/dev/null}°C
+
+#MPD: [ ${mpd_status}${if_mpd_playing} ${mpd_elapsed}/${mpd_length}$endif ] ${mpd_title} by ${mpd_artist} from ${mpd_album}
+
+#| IP: ${addr wlan0} | ${upspeed wlan0} Kb/s | ${downspeed wlan0} Kb/s 
+
+#MPD: [ ${mpd_status}${if_mpd_playing} ${mpd_elapsed}/${mpd_length}$endif ] ${mpd_title} by ${mpd_artist} from ${mpd_album} | Dropbox status: ${execi 6 dropbox status} | ${time %I:%M:%S %p | %B %e, %Y} | ${kernel} | ${uptime} | ${freq_g} GHz | Mem: (${memperc}%) | /boot: ${fs_free_perc /boot}% | /root: ${fs_free_perc /}% | /home: ${fs_free_perc /home}% 
+
+#${upspeed eth0} ${downspeed eth0} ${cpu} ${memperc} ${time %H:%M} ${time %A} ${time %e} ${time %B} ${time %G}  $alignr${time %a %d-%m-%y %H:%M}
+
+
+
+# battery?  acpi -b
+# acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\2/'
+# ${battery_percent}
+
+#IP: ${addr wlan0}
+#Signal: ${wireless_link_qual_perc wlan0}
+#Down: ${downspeed wlan0} Kb/s ${alignr}Up: ${upspeed wlan0} Kb/s
+#${downspeedgraph wlan0 15,50 ffffff ffffff} ${alignr}${upspeedgraph wlan0 15,50 ffffff ffffff}$color
+#Total: ${totaldown wlan0} ${alignr}Total: ${totalup wlan0}
+
+
+

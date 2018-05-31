@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/scripts/legacy/go_frame_or_desk.lua

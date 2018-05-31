@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/scripts/legacy/ctrl_statusbar.lua

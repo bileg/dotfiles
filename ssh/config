@@ -1,0 +1,18 @@
+Host * 
+  ServerAliveInterval 240
+
+Host local
+    HostName 127.0.0.1
+    Port 22
+    User bileg
+    IdentityFile ~/.ssh/id_rsa
+
+Host aws1
+    Hostname sadfsf.amazonaws.com
+    User ubuntu
+    IdentityFile /home/bileg/aws1.pem
+
+Host ttt01
+    Hostname ttt01asdfa.com
+    Port 4000
+    ForwardAgent yes

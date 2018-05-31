@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/scripts/exec_show.lua

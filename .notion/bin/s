@@ -1,0 +1,41 @@
+#!/bin/bash
+
+
+# now using
+#xterm -j +sb -sl 10000 -bg "rgb:25/2c/31" -fg yellow -bd yellow -cr yellow -cm +bc &
+xterm -j +sb -sl 10000 -bg "rgb:1C/1C/1C" -fg "rgb:00/D7/5F" -bd "rgb:00/D7/5F" -cr "rgb:00/D7/5F" -cm +bc
+
+
+
+
+#xterm -j +sb -sl 10000 -bg darkblue -fg yellow -bd yellow -cr yellow -cm +bc &
+#xterm -j +sb -sl 10000 -bg "rgb:00/22/54" -fg green -bd green -cr green -cm +bc &
+#xterm -j +sb -sl 10000 -bg "rgb:00/22/84" -fg green -bd green -cr green -cm +bc &
+####
+#xterm -j +sb -sl 10000 -bg "rgb:00/40/50" -fg yellow -bd yellow -cr yellow -cm +bc &
+
+#xterm -j +sb -sl 10000 -bg "rgb:3a/3a/3a" -fg "rgb:be/db/5a" -bd "rgb:be/db/5a" -cr "rgb:be/db/5a" -cm +bc &
+#####
+#xterm -j +sb -sl 10000 -bg "rgb:3a/3a/3a" -fg "rgb:bc/d9/59" -bd "rgb:bc/d9/59" -cr "rgb:bc/d9/59" -cm +bc &
+
+
+####
+#xterm -j +sb -sl 10000 -bg "rgb:25/2c/31" -fg "rgb:c4/e3/ff" -bd "rgb:c4/e3/ff" -cr "rgb:c4/e3/ff" -cm +bc &
+
+
+
+
+
+#xterm -j +sb -sl 10000 -bg "rgb:25/2c/31" -fg "rgb:bc/db/f7" -bd "rgb:bc/db/f7" -cr "rgb:bc/db/f7" -cm +bc &
+#xterm -j +sb -sl 10000 -bg "rgb:25/2c/31" -fg "rgb:d6/a7/8c" -bd "rgb:d6/a7/8c" -cr "rgb:d6/a7/8c" -cm +bc &
+
+
+
+#xterm -j +sb -sl 10000 -bg "rgb:3a/3a/3a" -fg "rgb:da/2c/21" -bd "rgb:da/2c/21" -cr "rgb:da/2c/21" -cm +bc &
+#xterm -j +sb -sl 10000 -bg "rgb:3a/3a/3a" -fg "rgb:ff/c6/6d" -bd "rgb:ff/c6/6d" -cr "rgb:ff/c6/6d" -cm +bc &
+#xterm -j +sb -sl 10000 -bg "rgb:3a/3a/3a" -fg "rgb:e1/49/39" -bd "rgb:e1/49/39" -cr "rgb:e1/49/39" -cm +bc &
+
+# -j - jump scrolling
+# -cm - disable extra colors
+# +bc - turn off cursor blinking
+

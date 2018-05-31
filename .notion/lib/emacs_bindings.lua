@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/keybindings/emacs_bindings.lua

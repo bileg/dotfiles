@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/statusd/legacy/statusd_info.lua

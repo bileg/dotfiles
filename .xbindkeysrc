@@ -1,0 +1,16 @@
+
+# volume up & down
+# https://bbs.archlinux.org/viewtopic.php?id=94137
+
+"/usr/bin/amixer -q sset Master 2+"
+    Control+Shift + Up
+"/usr/bin/amixer -q sset Master 2-"
+    Control+Shift + Down
+"setxkbmap us"
+    Alt+F11
+"setxkbmap ru"
+    Alt+F12
+
+
+
+

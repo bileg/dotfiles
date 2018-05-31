@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/statusd/statusd_xmms.lua

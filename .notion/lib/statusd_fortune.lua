@@ -1,0 +1,1 @@
+/home/bileg/.notion/contrib/statusd/statusd_fortune.lua

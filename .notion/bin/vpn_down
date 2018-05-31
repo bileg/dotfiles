@@ -1,0 +1,1 @@
+nmcli con down id VPN1
