@@ -8,6 +8,7 @@ export PATH=$PATH:/home/bileg/gevtools/pycharm-community/bin
 
 export XDG_CURRENT_DESKTOP=Unity       # unity-control-center
 
+export NO_AT_BRIDGE=1   # get rid of warning messages: "Couldn't connect to accessibility bus: Failed to connect to socket ..."
 
 #xrandr -o left
 
